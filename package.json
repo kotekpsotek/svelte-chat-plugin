@@ -1,6 +1,6 @@
 {
 	"name": "@svelte-chat/plugin",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build && npm run package",
@@ -43,7 +43,28 @@
 	"dependencies": {
 		"@svelte-chat/utils": "^0.0.1",
 		"express": "^4.18.2",
+		"mongoose": "^8.0.0",
 		"socket.io": "^4.7.2"
 	},
-	"keywords": ["svelte-chat", "svelte-chat-plugin", "chat", "svelte", "sveltekit", "vite", "sveltekit plugin", "plugin", "node.js", "node", "express", "typescript", "mongodb", "admin", "administration", "management", "tool", "management tool", "100% free to use"]
+	"keywords": [
+		"svelte-chat",
+		"svelte-chat-plugin",
+		"chat",
+		"svelte",
+		"sveltekit",
+		"vite",
+		"sveltekit plugin",
+		"plugin",
+		"node.js",
+		"node",
+		"express",
+		"typescript",
+		"mongodb",
+		"admin",
+		"administration",
+		"management",
+		"tool",
+		"management tool",
+		"100% free to use"
+	]
 }
