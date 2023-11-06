@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		%sveltekit.head%
+		<style>
+			body {
+				width: 100vw;
+				height: 100vh;
+			}
+
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			}
+
+			input {
+				height: 40px;
+				padding-left: 5px;
+				padding-right: 5px;
+				border: solid 1px grey;
+				border-radius: 5px;
+				outline: none;
+			}
+
+			button {
+				height: 40px;
+				padding: 5px;
+				background-color: black;
+				color: white;
+				font-size: 17px;
+				font-weight: 700;
+				outline: none;
+				border: solid 1px white;
+				border-radius: 5px;
+				cursor: pointer;
+				transition: all linear 100ms;
+			}
+
+			button:hover {
+				box-shadow: 0px 0px 15px grey;
+			}
+		</style>
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">%sveltekit.body%</div>
+	</body>
+</html>
