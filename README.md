@@ -1,58 +1,66 @@
-# create-svelte
+# Svelte-Chat-Plugin
+The ***sveltekit*** plugin for **svelte-chat** solution
 
-Everything you need to build a Svelte library, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
 
-Read more about creating a library [in the docs](https://kit.svelte.dev/docs/packaging).
+# Swift description
+Plugin for **svelte-chat** which in conjuction with [@svelte-chat/gui](https://github.com/kotekpsotek/svelte-chat-gui) makes remakable chat experiences which at least can handle cases from your online shop etc...
+> - This plugin is required to handle communication demanded by frontend solution part which is the [@svelte-chat/gui](https://github.com/kotekpsotek/svelte-chat-gui)
+> - Use only with [@svelte-chat/gui](https://github.com/kotekpsotek/svelte-chat-gui) to make full *****svelte-chat*** solution**  
 
-## Creating a project
+## Prerequisites
+1. SvelteKit app,
+2. MongoDB configured on port 27017
 
-If you're seeing this, you've probably already done this step. Congrats!
-
+# Installation (as always - for npm)
 ```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
+$ npm i @svelte-chat/plugin
 ```
 
-## Developing
+# You're one step in front of finish line (whole soultion implementation isn't accounted):
+***1st:*** Use **svelteChatPlugin** which embedds all source functionalities (with administration included)
+```typescript
+// vite.config.{js,ts}
+import { sveltekit } from '@sveltejs/kit/vite';
+import { defineConfig } from 'vite';
+// Import plugin from module
+import { svelteChatPlugin } from "@svelte-chat/plugin";
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+export default defineConfig({
+	plugins: [sveltekit(), svelteChatPlugin()]
+});
 ```
 
-Everything inside `src/lib` is part of your library, everything inside `src/routes` can be used as a showcase or preview app.
-
-## Building
-
-To build your library:
-
-```bash
-npm run package
+## Fine grainded configuration
+Fine grained configuartion covers for moment ports configuration for: **basic app communication**, **admin app** and all these ***optionally*** and ***separately***.<br/>
+You have to pass config as JSON content for your Device Environment Variable ***SVELTE_CHAT*** <br/><br/>
+**Configuration JSON Overlay:**
+```JSON
+{
+    /* Admin app - Where serves app under whose you can manage clien cases */
+    "admin_server": {
+        "port": 10502
+    },
+    /* App communcation - so where your client-side will be call, to get and send informations */
+    "server": {
+        "port": 10501
+    }
+}
 ```
 
-To create a production version of your showcase app:
+**As Device ENV "***SVELTE_CHAT***":**<br/>
+Ok, So when we defined what you can configure, to make this work and <u>***end fine-grained configuration***</u> you must pass such short config to device environment varaible ***SVELTE_CHAT***
 
-```bash
-npm run build
-```
 
-You can preview the production build with `npm run preview`.
+## Other worth informations
+1. Default Admin App port is **10502**,
+2. Default App communcation port is **10501** (for this port will be call ***@svelte-chat/gui*** client),
+3. It works fully as a vite sveltekit plugin,
+4. To store all datas we use **MongoDB** local database on default port **27017**
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+## Contribution:
+**You feel will to help in solution evolution.** Don't be shy and pull issue with demand like: I would like take the participation in evolution because ...[cause]
 
-## Publishing
+## License
+All what you should know about Copyrights is that all code base is under <u>Apache 2.0</u>
 
-Go into the `package.json` and give your package the desired name through the `"name"` option. Also consider adding a `"license"` field and point it to a `LICENSE` file which you can create from a template (one popular option is the [MIT license](https://opensource.org/license/mit/)).
-
-To publish your library to [npm](https://www.npmjs.com):
-
-```bash
-npm publish
-```
+<h3 align="center">Made with ❤️ by <b><a href="https://github.com/kotekpsotek">kotekpsotek</a></b></h3>
