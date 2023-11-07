@@ -1,9 +1,8 @@
 # Svelte-Chat-Plugin
 The ***sveltekit*** plugin for **svelte-chat** solution
 
-
 # Swift description
-Plugin for **svelte-chat** which in conjuction with [@svelte-chat/gui](https://github.com/kotekpsotek/svelte-chat-gui) makes remakable chat experiences which at least can handle cases from your online shop etc...
+Plugin for **svelte-chat** which in conjuction with [@svelte-chat/gui](https://github.com/kotekpsotek/svelte-chat-gui) makes remakable chat experiences which at least can handle cases from your online shop etc... [**full documentation**](https://kotekpsotek.github.io/svelte-chat-docs/)
 > - This plugin is required to handle communication demanded by frontend solution part which is the [@svelte-chat/gui](https://github.com/kotekpsotek/svelte-chat-gui)
 > - Use only with [@svelte-chat/gui](https://github.com/kotekpsotek/svelte-chat-gui) to make full *****svelte-chat*** solution**  
 

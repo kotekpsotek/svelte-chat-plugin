@@ -1,6 +1,6 @@
 {
 	"name": "@svelte-chat/plugin",
-	"version": "0.0.4",
+	"version": "0.0.5",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build && npm run package",
@@ -41,7 +41,7 @@
 	"types": "./dist/index.d.ts",
 	"type": "module",
 	"dependencies": {
-		"@svelte-chat/utils": "^0.0.1",
+		"@svelte-chat/utils": "^0.0.2",
 		"express": "^4.18.2",
 		"mongoose": "^8.0.0",
 		"socket.io": "^4.7.2"
